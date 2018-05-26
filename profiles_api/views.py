@@ -111,7 +111,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
 
     authentication_classes = [TokenAuthentication,]
 
-    permission_classes = [permissions.UpdateOwnProfile,]
+    permission_classes = [permissions.UpdateOwnProfile,IsAuthenticated]
 
     filter_backends=[filters.SearchFilter]
 
